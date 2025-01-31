@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Link Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <img src="../image/logo2.png" alt="Auto Link">
+        </div>
+        <div class="admin-profile">
+            <img src="../image/willtulog - Copy.jpg" alt="Admin">
+            <div class="admin-details">
+                <p class="admin-name">Christian Mondala</p>
+                <span class="admin-role">Admin</span>
+            </div>
+            <div class="status-indicator"></div>
+        </div>
+        
+        <ul class="menu">
+            <li onclick="setActive(this)"><i class="fas fa-th-large"></i> Dashboard</li>
+            <li onclick="setActive(this)"><i class="far fa-calendar-check"></i> Appointments</li>
+            <li class="active" onclick="setActive(this)"><i class="fas fa-car"></i> Services</li>
+            <li onclick="setActive(this)"><i class="fas fa-user-clock"></i> Customer History</li>
+            <li onclick="setActive(this)"><i class="fas fa-comment-dots"></i> Feedbacks</li>
+            <li onclick="setActive(this)"><i class="fas fa-sign-out-alt"></i> Logout</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header class="top-header">
+            <div class="menu-search">
+                <!-- Menu Toggle Button -->
+                <button class="menu-toggle" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="search-bar" placeholder="Search...">
+                </div>
+            </div>
+
+            <!-- User Profile (Moved inside the header and aligned right) -->
+            <div class="user-profile" onclick="toggleDropdown()">
+                <img src="../image/willtulog - Copy.jpg" alt="Admin">
+                <span class="username">Christian Mondala</span>
+                <i class="fas fa-chevron-down"></i>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <header>
+            <div class="date-checker">
+                <input type="date" id="date-input">
+            </div>
+            <p id="result"></p>
+
+            <div class="titleservices">
+                <h1>Services</h1>
+            </div>
+        </header>
+
+        <section class="services">
+            <div class="service-grid">
+                <div class="service-card" onclick="openService('Wheel Alignment')">
+                    <img src="../image/wheel_align.jpeg" alt="Wheel Alignment">
+                    <div class="overlay">
+                        WHEEL ALIGNMENT <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openService('Engine Oil Change')">
+                    <img src="../image/oil.jpg" alt="Engine Oil Change">
+                    <div class="overlay">
+                        ENGINE OIL CHANGE <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openService('Battery')">
+                    <img src="../image/battery.jpeg" alt="Battery">
+                    <div class="overlay">
+                        BATTERY <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openService('Tune-Ups')">
+                    <img src="../image/tune_up.jpg" alt="Tune-Ups">
+                    <div class="overlay">
+                        TUNE-UPS <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openService('Brakes')">
+                    <img src="../image/brakes.jpg" alt="Brakes">
+                    <div class="overlay">
+                        BRAKES <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openService('Suspension')">
+                    <img src="../image/suspension.jpg" alt="Suspension">
+                    <div class="overlay">
+                        SUSPENSION <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openService('Clutch/Transmission')">
+                    <img src="../image/clutch_transmission.jpg" alt="Clutch">
+                    <div class="overlay">
+                        CLUTCH/TRANSMISSION <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openService('Air Conditioning')">
+                    <img src="../image/airconditioning.jpg" alt="Air Conditioning">
+                    <div class="overlay">
+                        AIR CONDITIONING <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openService('Exhaust System')">
+                    <img src="../image/exhaust.jpg" alt="Exhaust System">
+                    <div class="overlay">
+                        EXHAUST SYSTEM <br>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="service-title"></h2>
+            <p>Past Services</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Customers</th>
+                        <th>Date</th>
+                        <th>Vehicle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Justin Kurt Munar</td>
+                        <td>20/01/25</td>
+                        <td>Ford F1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleDropdown() {
+            document.getElementById("dropdownMenu").classList.toggle("show");
+        }
+
+        // Close dropdown when clicking outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.user-profile, .user-profile *')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+
+        // Sidebar Toggle
+        function toggleSidebar() {
+            var sidebar = document.querySelector(".sidebar");
+            if (sidebar.style.display === "none" || sidebar.style.display === "") {
+                sidebar.style.display = "flex"; // Show sidebar
+            } else {
+                sidebar.style.display = "none"; // Hide sidebar
+            }
+        }
+    </script>
+
+</body>
+</html>

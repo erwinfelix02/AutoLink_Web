@@ -1,0 +1,453 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background: #1a1a1a;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 50%;
+}
+
+/* Admin Profile Section */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 1px;
+    color: white;
+    position: relative;
+    width: max-content;
+    margin-right: auto;
+    
+}
+
+.admin-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.admin-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.admin-role {
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Green Status Indicator */
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    background: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+    border: 2px solid #1a1a1a;
+}
+
+/* Sidebar Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.menu li.active {
+    background: #D9D9D9;
+    border-radius: 10px;
+    color: rgb(255, 0, 0);
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Fix Header Layout */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #ffffff;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background: #1a1a1a;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease;
+}
+
+/* Align User Profile to the Far Right */
+.user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto; /* Pushes it to the right */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.dropdown-menu.show {
+    display: block; /* Show when clicked */
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #292929;
+    padding: 8px 12px;
+    border-radius: 20px;
+    width: 100%; 
+    max-width: 300px; 
+}
+
+.search-container i {
+    color: #aaa;
+    margin-right: 8px;
+}
+
+.search-bar {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+}
+
+
+.menu-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.titleservices {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: absolute;
+    left: 260px;
+    top: 12%;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+
+
+
+/* Date Checker Container */
+.date-checker {
+    display: flex;
+    align-items: center;
+}
+
+#date-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Result Text */
+#result {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* User Profile Dropdown */
+.user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.user-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fas {
+    transition: transform 0.3s ease;
+}
+
+.user-profile.active .fas {
+    transform: rotate(180deg);
+    
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background: #f4f4f4;
+}
+
+/* Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Service Cards */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(255, 255, 255, 0.0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    transition: height 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+
+.service-card:hover .overlay {
+    height: 100%;
+    background: rgba(255, 0, 0, 0.50);
+}
+
+
+.overlay i {
+    font-size: 20px;
+    margin-top: 5px;
+    background: white;
+    color: red;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content (Clear & Sharp) */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: left;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.blur-services .service-card {
+    filter: blur(5px); /* Blurs only the service cards */
+    pointer-events: none; /* Prevents interaction with blurred elements */
+}
+
+#modal {
+    filter: none !important; /* Ensure modal remains clear */
+}
+
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 10px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: black;
+    color: white;
+}

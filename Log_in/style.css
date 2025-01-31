@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.9) 80%),
+                            url(../image/Login_bg.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.5);
+}
+
+.login-box, .welcome-box {
+    padding: 40px;
+    width: 50%;
+}
+
+/* Left Side - Login Box */
+.login-box h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.dot {
+    color: red;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: 1px solid red;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: red;
+}
+
+.options {
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.options label {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.forgot {
+    color: red;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: darkred;
+}
+
+/* Right Side - Welcome Box */
+.welcome-box {
+    background: #B80000;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.welcome-box h2 {
+    font-size: 22px;
+    margin-top: 10%;
+}
+
+.welcome-box p {
+    font-size: 14px;
+    margin-top: 5px;
+}
